@@ -1,0 +1,45 @@
+@import "./tokens.css";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--touch-min);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: #1f4fd8;
+  color: #fff;
+}
+
+.button-secondary {
+  background: transparent;
+  border-color: #475569;
+  color: #1e293b;
+}
+
+.button-danger {
+  background: #c62828;
+  color: #fff;
+}
+
+.button:focus-visible {
+  outline: 2px solid #1f4fd8;
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button + .button {
+  margin-inline-start: var(--space-3);
+}
